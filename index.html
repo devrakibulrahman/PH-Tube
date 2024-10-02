@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,8 @@
         tailwind.config = {
           theme: {
             extend: {
-              colors: {
-                clifford: '#da373d',
+              fontFamily: {
+                inter: 'Inter'
               }
             }
           }
@@ -29,7 +29,77 @@
 </head>
 <body>
     <!-- ============ header section ============= -->
-    
+    <header class="w-full">
+        <div class="container mx-auto px-4">
+            <!-- ============ header nav section ============== -->
+            <div class="w-full flex items-center justify-between pt-9 pb-[15px] border-b border-[#17171733] md:py-9">
+                <div class="w-[115px] md:w-[130px] lg:w-[170px]">
+                    <a href="#"><img src="./assets/Logo.png" alt="logo"></a>
+                </div>
+                <div class="relative flex items-center justify-center gap-x-7 md:gap-0">
+                    <div class="w-full">
+                        <div id="searchBtn" class="md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#252525]">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>                      
+                        </div>
+                        <div class="hidden w-[350px] h-[40px] relative sm:w-full md:block lg:w-[500px] lg:h-[45px]">
+                            <input type="text" placeholder="Search Here" class="input input-bordered pr-[70px] font-inter font-normal text-[#252525B3] border-none w-full h-full rounded-md bg-white/80 ring-1 ring-[#FF1F3D] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[#FF1F3D]"/>
+                            <div class="w-[50px] h-[40px] bg-red-500 flex items-center justify-center rounded-tr-md rounded-br-md absolute top-0 right-0 ring-1 ring-[#FF1F3D] lg:h-[45px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                </svg>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menuBarOpenBtn" class="md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 text-[#252525]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>                  
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <button class="font-inter font-medium text-lg leading-[22px] text-white py-[10px] px-[20px] bg-[#FF1F3D] rounded-[4px]">Blog</button>
+                </div>
+            </div>
+            <!-- ============ header nav section ============== -->
+        </div>
+        <!-- ============= mobile nav ============= -->
+        <div id="mobileNav" class="w-full h-screen bg-white/70 backdrop-blur-sm fixed top-0 right-[-120%] duration-500 ease-in-out sm:w-[350px]">
+            <div id="menuBarCloseBtn" class="mt-9 ml-6 bg-[#FF1F3D] inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>                  
+            </div>
+            <!-- ============== mobile nav links ============== -->
+            <div class="w-full mt-9 space-y-5">
+                <a href="#" class="font-inter font-medium text-base text-[#252525B3] py-4 pl-7 block border-b border-black/10 transition duration-200 ease-in-out hover:bg-[#FF1F3D] hover:border-[#FF1F3D] hover:text-white">All</a>
+                <a href="#" class="font-inter font-medium text-base text-[#252525B3] py-4 pl-7 block border-b border-black/10 transition duration-200 ease-in-out hover:bg-[#FF1F3D] hover:border-[#FF1F3D] hover:text-white">Music</a>
+                <a href="#" class="font-inter font-medium text-base text-[#252525B3] py-4 pl-7 block border-b border-black/10 transition duration-200 ease-in-out hover:bg-[#FF1F3D] hover:border-[#FF1F3D] hover:text-white">Comedy</a>
+                <a href="#" class="font-inter font-medium text-base text-[#252525B3] py-4 pl-7 block border-b border-black/10 transition duration-200 ease-in-out hover:bg-[#FF1F3D] hover:border-[#FF1F3D] hover:text-white">Drawing</a>
+                <a href="#" class="font-inter font-medium text-base text-[#252525B3] py-4 pl-7 block border-b border-black/10 transition duration-200 ease-in-out hover:bg-[#FF1F3D] hover:border-[#FF1F3D] hover:text-white">Blog</a>
+            </div>
+        </div>
+        <!-- ============= mobile nav ============= -->
+
+        <!-- ============= search box ============= -->
+        <div id="searchBar" class="w-full px-4 pt-8 pb-2 bg-white/20 backdrop-blur-sm absolute top-[-100%] right-0 flex items-center justify-between gap-x-4 duration-300 ease-in-out md:pt-9 md:pb-2 md:hidden">
+            <div id="closeSearchBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-[#252525]">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>                  
+            </div>
+            <div class="w-[350px] h-[40px] sm:w-full relative">
+                <input type="text" placeholder="Search Here" class="input input-bordered pr-[70px] font-inter font-normal text-[#252525B3] border-none w-full h-full rounded-md bg-white/80 ring-1 ring-[#FF1F3D] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[#FF1F3D]"/>
+                <div class="w-[50px] h-[40px] bg-red-500 flex items-center justify-center rounded-tr-md rounded-br-md absolute top-0 right-0 ring-1 ring-[#FF1F3D]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>                  
+                </div>
+            </div>
+        </div>
+        <!-- ============= search box ============= -->
+    </header>
     <!-- ============ header section ============= -->
 
     <!-- ============ main section ============= -->
