@@ -1,0 +1,29 @@
+/* tab button active status ---------------> */
+.tabBtn{
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: #252525B3;
+    background-color: #25252526;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tabBtn:hover{
+    background-color: #FF1F3D;
+    color: white;
+}
+
+.active {
+    background-color: #FF1F3D;
+    color: white;
+}
+
+/* responsive media query -----------------> */
+@media (min-width: 1024px) {
+    .tabBtn{
+        font-size: 1.125rem;
+    }
+}
