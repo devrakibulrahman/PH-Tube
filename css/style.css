@@ -11,7 +11,7 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-.tabBtn:hover{
+.tab-button:hover{
     background-color: #FF1F3D;
     color: white;
 }
@@ -21,13 +21,12 @@
     color: white;
 }
 
-
 /* video card design -----------------> */
 .vd-container{
     width: 100%;
     /* background-color: red; */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
     gap: 24px;
 }
 
@@ -39,7 +38,7 @@
 
 .vd-card .thumbnail{
     width: 100%;
-    height: 229px;
+    /* height: 229px; */
     /* background-color: red; */
     /* overflow: hidden; */
 }
@@ -125,10 +124,35 @@
 }
 
 /* responsive media query -----------------> */
-
+@media (min-width: 320px) and (max-width: 1024px){
+    .vd-container{
+        row-gap: 44px;
+    }
+}
 
 @media (min-width: 1024px) {
     .tabBtn{
         font-size: 1.125rem;
     }
 }
+
+/* responsive nav links ---------------> */
+.nav-link-btn{
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1rem;
+    border-bottom: 1px solid rgb(0 0 0 / 0.1);
+    padding: 16px 0px 16px 28px;
+    display: block;
+}
+
+.nav-link-btn:hover{
+    background-color: #FF1F3D;
+    color: white;
+}
+
+.navActive{
+    border-bottom: 1px solid #FF1F3D;
+    background-color: #FF1F3D;
+    color: white;
+};

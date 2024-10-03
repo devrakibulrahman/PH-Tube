@@ -1,3 +1,9 @@
+// video load api ---------------->
+// https://openapi.programming-hero.com/api/phero-tube/videos
+
+// categories load api -------------->
+// https://openapi.programming-hero.com/api/phero-tube/categories
+
 // responsive header ------------------->
 const navOpen = (open) => {
     const openNav = open;
@@ -16,6 +22,23 @@ const menuBarCloseBtn = document.querySelector('#menuBarCloseBtn');
 menuBarCloseBtn.addEventListener('click', () => {
     const mobileNav = document.querySelector('#mobileNav');
     navOpen(mobileNav);
+});
+
+
+// responsive nav link btn ----------------->
+const navLinks = document.querySelectorAll('#navLinkBtn');
+navLinks.forEach((navLink) => {
+    const navLinkBtn = navLink;
+
+    navLinkBtn.addEventListener('click', (navBtn) =>{;
+        const navLinksBtn = navLink;
+
+        navLinks.forEach((navButton) => {
+            navButton.classList.remove('navActive');
+        });
+
+        navLinksBtn.classList.add('navActive');
+    });
 });
 
 // responsive search box ------------------->
