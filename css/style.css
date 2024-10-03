@@ -21,7 +21,112 @@
     color: white;
 }
 
+
+/* video card design -----------------> */
+.vd-container{
+    width: 100%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.vd-card{
+    width: 100%;
+    min-height: 335px;
+    /* background-color: rgb(173, 173, 173); */
+}
+
+.vd-card .thumbnail{
+    width: 100%;
+    height: 229px;
+    /* background-color: red; */
+    /* overflow: hidden; */
+}
+
+.vd-card .thumbnail img{
+    width: 100%;
+    /* height: 244px; */
+}
+
+.vd-card .vd-details{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.vd-card .vd-details .vd-logo{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.vd-card .vd-details .vd-title-bx{
+    width: 80%;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-title{
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 1rem;
+    color: #171717;
+    line-height: 26px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details{
+    margin-top: 8px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-channel{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-channel .channel-name{
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 14px;
+    color: #171717B3;
+    line-height: 17px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-channel .verify-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-views{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-views .views-title{
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 14px;
+    color: #171717B3;
+    line-height: 17px;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-views .dotted-divider{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #171717B3;
+}
+
+.vd-card .vd-details .vd-title-bx .vd-channel-details .vd-views{
+    margin-top: 7px;
+}
+
 /* responsive media query -----------------> */
+
+
 @media (min-width: 1024px) {
     .tabBtn{
         font-size: 1.125rem;
